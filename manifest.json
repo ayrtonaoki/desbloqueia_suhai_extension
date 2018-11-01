@@ -1,0 +1,22 @@
+{
+    "name": "Desbloqueia Suhai",
+    "manifest_version": 2,
+    "version": "2.0",
+    "icons": { 
+		"16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "description": "Extensão do Google Chrome que desbloqueia o acesso a Suhai dos colaboradores Bidu",
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "https://www.intergrall.com.br/callcenter/cc_login.php"
+    ],
+    "content_scripts": [{
+        "js": ["js/funcao.js"],
+        "matches": ["https://www.intergrall.com.br/callcenter/cc_login.php"]
+    }]
+}
